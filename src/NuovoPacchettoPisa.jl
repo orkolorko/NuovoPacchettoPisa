@@ -33,7 +33,7 @@ end
     standard(p, θ; K) where K is default at 0.6
 """
 function standard(p, θ; K = 0.6)
-    p = p + K * sin(θ)
+    p = p + K * sin(1.001 * θ)
     θ = θ + p
     return mod(p, 2 * π), mod(θ, 2 * π)
 end
