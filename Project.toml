@@ -3,5 +3,8 @@ uuid = "b4cce58e-afbc-4e97-8bf5-3bb1aa7f755a"
 authors = ["Isaia Nisoli"]
 version = "0.0.1-DEV"
 
+[deps]
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+
 [compat]
 julia = "1.1"

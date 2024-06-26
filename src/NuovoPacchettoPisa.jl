@@ -1,5 +1,7 @@
 module NuovoPacchettoPisa
 
+export T, orbit, standard
+
 @doc raw"""
 This function represents the full branch quadratic map
     ``T(x) = 4x(1-x)``
@@ -24,6 +26,16 @@ function orbit(T, x0, N; transient = 2 * N)
         x = T(x)
     end
     return out
+end
+
+"""
+    standard map 
+    standard(p, θ; K) where K is default at 0.6
+"""
+function standard(p, θ; K = 0.6)
+    p = p + K * sin(θ)
+    θ = θ + p
+    return mod(p, 2 * π), mod(θ, 2 * π)
 end
 
 end
